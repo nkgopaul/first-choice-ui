@@ -1,41 +1,43 @@
 import React, { Component } from 'react';
-import Slider from 'react-slick';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import styles from './FiltersContainer.module.css'; 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import CheckboxFilter from './CheckboxFilter';
+import filters from '../../locales/en'
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 export default class FiltersContainer extends Component {
-    render() {
-        let settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-          };
-          return (
-            <div className={styles.container}>
-              <Slider {...settings}>
-                <div>
-                  <h3>1</h3>
-                </div>
-                <div>
-                  <h3>2</h3>
-                </div>
-                <div>
-                  <h3>3</h3>
-                </div>
-                <div>
-                  <h3>4</h3>
-                </div>
-                <div>
-                  <h3>5</h3>
-                </div>
-                <div>
-                  <h3>6</h3>
-                </div>
-              </Slider>
-            </div>
-          );
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+      return (
+        <div className={styles.container}>
+          <CarouselProvider
+            naturalSlideWidth={100}
+            naturalSlideHeight={60}
+            totalSlides={Object.values(filters).length}
+          >
+            <Slider>
+              {
+                Object.values(filters).map((f, i) => 
+                  <Slide index={i} key={i}>
+                    <CheckboxFilter
+                      filter={Object.keys(filters)[i]}
+                      question={f.question}
+                      options={f.options}
+                      checkedOptions={this.props.filters[Object.keys(filters)[i]]}
+                      addFilter={this.props.addFilter}
+                      removeFilter={this.props.removeFilter}
+                    />
+                  </Slide>
+                )
+              }
+            </Slider>
+            <ButtonBack>Back</ButtonBack>
+            <ButtonNext>Next</ButtonNext>
+          </CarouselProvider>
+        </div>
+      );
     }
 }
