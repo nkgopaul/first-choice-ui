@@ -1,4 +1,4 @@
-export default {
+export const FILTERS = {
     "category": {
         "question": "Which of the following categories of resources are you interested in?",
         "options": [
@@ -6,7 +6,6 @@ export default {
             "Education",
             "Health",
             "Housing",
-            "Other",
             "Family",
             "Laundry",
             "Clothing",
@@ -16,11 +15,12 @@ export default {
             "Youth Services",
             "Finance",
             "Utilities",
-            "Child Care"
+            "Child Care",
+            "Other"
         ]
     },
     "gender" : {
-        "question": "Which gender(s) do you most closely identify with?",
+        "question": "Are you searching for resources for any specific gender?",
         "options": [
             "Male",
             "Female",
@@ -28,22 +28,21 @@ export default {
         ]
     },
     "race_ethnicity" : {
-        "question": "Which ethnicities do you identify with?",
+        "question": "Are you searching for resources for any specific ethnicities?",
         "options": [
-            "American Indian or Alaska Native",
             "Asian",
             "Black or African American",
-            "Native Hawaiian or Other Pacific Islander",
-            "White",
-            "Hispanic or Latinx"
+            "Hispanic or Latinx",
+            "White"
         ]
     },
     "age": {
         "question": "Please select the age groups you are seeking resources for:",
         "options": [
             "Children",
-            "Teenagers",
+            "Teens",
             "Young Adults",
+            "Adults",
             "Elderly"
         ]
     },
@@ -59,28 +58,25 @@ export default {
     "employment": {
         "question": "Please select your employment status:",
         "options": [
-            "Employee",
-            "Worker",
-            "Self-Employed",
-            "Actively Seeking",
-            "Not in Labour Force"
+            "Employed",
+            "Student",
+            "Unemployed"
         ]
     },
     "sexual_orient": {
-        "question": "Which sexual orientation(s) do you most closely identify with?",
+        "question": "Are you searching for resources for any specific sexualities?",
         "options": [
             "Straight/Heterosexual",
-            "LGBTQ+"
+            "Homosexual",
+            "Bisexual"
         ]
     },
     "beliefs": {
-        "question": "Which most closely describes your religious beliefs?",
+        "question": "Are you searching for resources for any specific religious beliefs?",
         "options": [
             "Christian",
             "Islam",
-            "Hinduism",
             "Judaism",
-            "Buddhist",
             "Secular/Agnostic/Atheist"
         ]
     },
@@ -108,4 +104,89 @@ export default {
             "Long-term"
         ]
     }
+}
+
+export const PARAMS_MAPPING = {
+    "category" : {
+        "Food": "Food",
+        "Education": "Education",
+        "Health": "Health",
+        "Housing": "Housing",
+        "Other": "Other",
+        "Family": "Family",
+        "Laundry": "Laundry",
+        "Clothing": "Clothing",
+        "Legal": "Legal",
+        "Transportation": "Transportation",
+        "Employment": "Employment",
+        "Youth Services": "Youth Services",
+        "Finance": "Finance",
+        "Utilities": "Utilities",
+        "Child Care": "Child Care"
+    },
+    "gender": {
+        "any": "any_gender",
+        "Male": "male",
+        "Female": "female",
+        "Non-binary": "any_gender"
+    },
+    "race_ethnicity": {
+        "any": "any_race",
+        "Black or African American": "black",
+        "White": "white",
+        "Hispanic or Latinx": "latinx",
+        "Asian": "asian"
+    },
+    "age": {
+        "any": "any_age_group",
+        "Children": "children",
+        "Teens": "teens",
+        "Young Adults": "young_adults",
+        "Adults": "adults",
+        "Elderly": "elderly"
+    },
+    "marital_status": {
+        "any": "any_marital_status",
+        "Married": "married",
+        "Widowed": "widowed",
+        "Divorced or Separated": "divorced",
+        "Single or Never Married": "single"
+    },
+    "employment": {
+        "any": "any_employment",
+        "Employed": "any_employment",
+        "Student": "student",
+        "Unemployed": "unemployed"
+    },
+    "sexual_orient": {
+        "any": "any_orientation",
+        "Homosexual": "homosexual",
+        "Bisexual": "bisexual",
+        "Straight/Heterosexual": "heterosexual"
+    },
+    "beliefs": {
+        "any": "any_beliefs",
+        "Christian": "christian",
+        "Islam": "muslim",
+        "Judaism": "jewish",
+        "Secular/Agnostic/Atheist": "atheist"
+    },
+    "criminality": {
+        "any": "any_criminal_status",
+        "Yes": "felon",
+        "No": "non-felon"
+    },
+    "citizenship": {
+        "any": "any_citizenship_status",
+        "Natural Citizen": "us_citzen", // (SIC) ...
+        "Naturalized Citizen": "us_citzen",
+        "Dual Citizen": "us_citzen",
+        "Temporary Visa Holder": "resident",
+        "Undocumented Immigrant": "",
+    },
+    "time_period": {
+        "any": "either",
+        "Short-term": "short_term",
+        "Long-term": "long_term"
+    },
 }

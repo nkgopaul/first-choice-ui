@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import FiltersContainer from './components/filters/FiltersContainer';
 import ResultsContainer from './components/results/ResultsContainer';
-import { getAllResources } from './lib/api';
 
 class App extends Component {
   constructor() {
@@ -42,9 +41,11 @@ class App extends Component {
         <FiltersContainer
           addFilter={this.addFilter}
           removeFilter={this.removeFilter}
-          filters={this.state}
+          selected_filters={this.state}
         />
-        <ResultsContainer />
+        <ResultsContainer
+          selected_filters={this.state}
+        />
       </div>
     );
   }
