@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Navbar from './components/navbar/Navbar.js';
 import FiltersContainer from './components/filters/FiltersContainer';
 import ResultsContainer from './components/results/ResultsContainer';
 
@@ -37,15 +38,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <FiltersContainer
-          addFilter={this.addFilter}
-          removeFilter={this.removeFilter}
-          selected_filters={this.state}
-        />
-        <ResultsContainer
-          selected_filters={this.state}
-        />
+      <div>
+        <Navbar />
+        <div className="App">
+          <FiltersContainer
+            addFilter={this.addFilter}
+            removeFilter={this.removeFilter}
+            selected_filters={this.state}
+          />
+          <ResultsContainer
+            selected_filters={this.state}
+          />
+        </div>
       </div>
     );
   }

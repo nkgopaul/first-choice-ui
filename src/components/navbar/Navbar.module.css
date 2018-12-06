@@ -1,0 +1,16 @@
+.container {
+    height: 4em;
+    width: 100%;
+    background: #A3D7F9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    padding-top: .6em;
+}
+
+.textHeader {
+    font-size: 1.5em;
+}

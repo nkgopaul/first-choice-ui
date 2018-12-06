@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.question {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.labelContainer {
+    display: block;
+    float: left;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkinput {
+    vertical-align: middle;
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+}
+
+.labelText {
+    padding-left: 0.2em;
+    color: white;
+}
