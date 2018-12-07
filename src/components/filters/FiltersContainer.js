@@ -38,6 +38,7 @@ export default class FiltersContainer extends Component {
             {
               filterNames.map((e, i) => 
                 <Dot
+                  key={i}
                   slide={i}
                   className={styles.dots}
                 />
