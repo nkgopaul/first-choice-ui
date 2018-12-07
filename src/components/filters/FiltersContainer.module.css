@@ -60,7 +60,7 @@
 }
 
 .dots {
-    background:#9cd6fd;
+    background:#eed9c4;
     border-radius: 50%;
     border: none;
     height: 1em;
@@ -68,7 +68,7 @@
 }
 
 .dots:disabled {
-    background:#2385C7;
+    background:#956C46;
     height: 1.1em;
     width: 1.1em;
     transition: width 1s, height 1s;

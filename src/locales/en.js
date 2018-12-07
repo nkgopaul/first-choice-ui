@@ -20,7 +20,7 @@ export const FILTERS = {
         ]
     },
     "gender" : {
-        "question": "Which of the following best describes your gender?",
+        "question": "Are you searching for resources for any specific gender?",
         "options": [
             "Male",
             "Female",
@@ -28,7 +28,7 @@ export const FILTERS = {
         ]
     },
     "race_ethnicity" : {
-        "question": "Which of the following best describes your ethnic background?",
+        "question": "Are you searching for resources for any specific ethnic backgrounds?",
         "options": [
             "Asian",
             "Black or African American",
@@ -37,7 +37,7 @@ export const FILTERS = {
         ]
     },
     "age": {
-        "question": "Please select the age groups you are seeking resources for:",
+        "question": "Are you searching for resources for any specific age groups?",
         "options": [
             "Children",
             "Teens",
@@ -47,7 +47,7 @@ export const FILTERS = {
         ]
     },
     "marital_status": {
-        "question": "Please select your marital status:",
+        "question": "Are you the resources you are searching for apply to any specific marital statuses?",
         "options": [
             "Married",
             "Widowed",
@@ -56,7 +56,7 @@ export const FILTERS = {
         ]
     },
     "employment": {
-        "question": "Please select your employment status:",
+        "question": "Are the resources you are searching for apply to any specific employment statuses?",
         "options": [
             "Employed",
             "Student",
@@ -64,7 +64,7 @@ export const FILTERS = {
         ]
     },
     "sexual_orient": {
-        "question": "Which of the following best describes your sexuality?",
+        "question": "Are you searching for resources for any specific sexualities?",
         "options": [
             "Straight/Heterosexual",
             "Homosexual",
@@ -72,7 +72,7 @@ export const FILTERS = {
         ]
     },
     "beliefs": {
-        "question": "Which of the following best describes your religious beliefs?",
+        "question": "Are you searching for resources for any specific religious beliefs?",
         "options": [
             "Christian",
             "Islam",
@@ -81,14 +81,14 @@ export const FILTERS = {
         ]
     },
     "criminality": {
-        "question": "Have you ever been convicted of a crime?",
+        "question": "Have you, or any of the individuals you are seeking to help, ever been convicted of a crime?",
         "options":[
             "Yes",
             "No"
         ]
     },
     "citizenship": {
-        "question": "What is your citizenship status?",
+        "question": "Are you searching for resources for any specific citizenship status?",
         "options": [
             "Natural Citizen",
             "Naturalized Citizen",
@@ -98,7 +98,7 @@ export const FILTERS = {
         ]
     },
     "time_period": {
-        "question": "What is the time frame for resources you are searching for? I.e. are you looking for short or long term support for your food needs?",
+        "question": "What is the time-frame for resources you are searching for?",
         "options": [
             "Short-term",
             "Long-term"

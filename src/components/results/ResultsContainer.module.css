@@ -1,5 +1,5 @@
 .container {
-    background-color: #72C1F4;
+    background-color: #eed9c4;
     border-radius: 0.5em;
     width: 30%;
     height: calc(100vh - 6em);
@@ -24,14 +24,12 @@
 }
 
 .container::-webkit-scrollbar-thumb {
-    background-color: #0A87D8;
+    background-color: #cdb79e;
     border-radius: 10px;
     width: 0.1em;
 }
 ​
-
 .resources {
-    color:red;
     font-size: 10em;
     padding-top: 0.7em;
     padding-bottom: 0.7em;
