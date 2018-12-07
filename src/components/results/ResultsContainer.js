@@ -43,7 +43,7 @@ export default class ResultsContainer extends Component {
         if(this.state.loading) {
             content = 
                     <div className={styles.resultsFeedback}>
-                        <span role='img' aria-label='sheep'>🕒</span>
+                        <span role='img' aria-label='time'>🕒</span>
                         <div>Loading results...</div>
                     </div>
             ;
@@ -60,7 +60,7 @@ export default class ResultsContainer extends Component {
         } else {
             content = 
                     <div className={styles.resultsFeedback}>
-                        <span role='img' aria-label='sheep'>🤷</span>
+                        <span role='img' aria-label='shrug'>🤷</span>
                         <div>No results found</div>
                     </div>
             ;
