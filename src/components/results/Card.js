@@ -10,8 +10,12 @@ export default class Card extends React.PureComponent {
     }
 
     render() {
+
+        let containerColor = this.props.header==="Error" ? styles.error : styles.result;
+        console.log(containerColor);
+
         return (
-            <div className={styles.container}>
+            <div className={`${styles.container} ${containerColor}`}>
                 <div className={styles.headerContainer}>
                     <div className={styles.headerText}><b>{this.props.header}</b></div>
                 </div>

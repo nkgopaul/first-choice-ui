@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { getFilteredResources } from '../../lib/api';
 import styles from './ResultsContainer.module.css';
 import Card from './Card';
-// import SimpleBar from 'simplebar-react';
-// import 'simplebar/dist/simplebar.min.css';
 
 export default class ResultsContainer extends Component {
     constructor(props) {
@@ -34,6 +32,7 @@ export default class ResultsContainer extends Component {
                     loading: false,
                     results: [],
                     error: true,
+                    errorText: err,
                 });
             });
         }
@@ -42,9 +41,14 @@ export default class ResultsContainer extends Component {
     render() {
         let content;
         if(this.state.loading) {
-            content = <div>Loading</div>;
+            content = 
+                    <div className={styles.resultsFeedback}>
+                        <span>🕒</span>
+                        <div>Loading results...</div>
+                    </div>
+            ;
         } else if (this.state.error) {
-            content = <div>Error</div>;
+            content = <Card header={"Error"} content={"We encountered a problem while fetching results. Please try again later or report this issue."} />;
         } else if (Object.keys(this.state.results).length > 0) {
             content = Object.values(this.state.results).map(d => d.data.map(e => 
                 <Card
@@ -54,12 +58,17 @@ export default class ResultsContainer extends Component {
                 />
             ))
         } else {
-            content = <div>No results found</div>;
+            content = 
+                    <div className={styles.resultsFeedback}>
+                        <span>🤷</span>
+                        <div>No results found</div>
+                    </div>
+            ;
         }
 
         return (
             <div className={styles.container}>
-                <div className={styles.title}><b>Resources</b></div>
+                <div className={styles.resources}><b>Resources</b></div>
                 {content}
             </div>
         );

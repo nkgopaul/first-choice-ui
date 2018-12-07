@@ -20,7 +20,7 @@ export const FILTERS = {
         ]
     },
     "gender" : {
-        "question": "Are you searching for resources for any specific gender?",
+        "question": "Which of the following best describes your gender?",
         "options": [
             "Male",
             "Female",
@@ -28,7 +28,7 @@ export const FILTERS = {
         ]
     },
     "race_ethnicity" : {
-        "question": "Are you searching for resources for any specific ethnicities?",
+        "question": "Which of the following best describes your ethnic background?",
         "options": [
             "Asian",
             "Black or African American",
@@ -64,7 +64,7 @@ export const FILTERS = {
         ]
     },
     "sexual_orient": {
-        "question": "Are you searching for resources for any specific sexualities?",
+        "question": "Which of the following best describes your sexuality?",
         "options": [
             "Straight/Heterosexual",
             "Homosexual",
@@ -72,7 +72,7 @@ export const FILTERS = {
         ]
     },
     "beliefs": {
-        "question": "Are you searching for resources for any specific religious beliefs?",
+        "question": "Which of the following best describes your religious beliefs?",
         "options": [
             "Christian",
             "Islam",
@@ -98,7 +98,7 @@ export const FILTERS = {
         ]
     },
     "time_period": {
-        "question": "What is the time frame for resources you are searching for?",
+        "question": "What is the time frame for resources you are searching for? I.e. are you looking for short or long term support for your food needs?",
         "options": [
             "Short-term",
             "Long-term"

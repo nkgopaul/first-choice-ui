@@ -3,12 +3,19 @@
     min-height: 10em;
     max-height: 10em;
     margin: 0.5em;
-    background-color: #A3D7F9;
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
+}
+
+.result {
+    background-color: #A3D7F9;
+}
+
+.error {
+    background-color: #ffb2b2;
 }
 
 .headerContainer {
@@ -18,7 +25,6 @@
     padding-right: 0.5em;
     padding-top: 0.5em;
     text-align: left;
-    /* overflow: hidden; */
 }
 
 .headerText {

@@ -12,8 +12,41 @@
     align-items: center;
 }
 
-.title {
-    font-size: 1.2em;
+.container::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #0A87D8;
+    border-radius: 10px;
+    width: 0.1em;
+}
+​
+
+.resources {
+    color:red;
+    font-size: 10em;
     padding-top: 0.7em;
     padding-bottom: 0.7em;
+}
+
+.simpleBar {
+    height: 300px;
+    width: 10em;
+}
+
+.resultsFeedback {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
