@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { getFilteredResources } from '../../lib/api';
 import styles from './ResultsContainer.module.css';
+import Card from './Card';
+// import SimpleBar from 'simplebar-react';
+// import 'simplebar/dist/simplebar.min.css';
 
 export default class ResultsContainer extends Component {
     constructor(props) {
@@ -43,14 +46,20 @@ export default class ResultsContainer extends Component {
         } else if (this.state.error) {
             content = <div>Error</div>;
         } else if (Object.keys(this.state.results).length > 0) {
-            content = <div>Results</div>;
+            content = Object.values(this.state.results).map(d => d.data.map(e => 
+                <Card
+                    header={e.name}
+                    content={e.notes}
+                    url={e.url}
+                />
+            ))
         } else {
             content = <div>No results found</div>;
         }
 
         return (
             <div className={styles.container}>
-                <div>Resources</div>
+                <div className={styles.title}><b>Resources</b></div>
                 {content}
             </div>
         );
