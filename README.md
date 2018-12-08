@@ -42,3 +42,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## .env
+
+To set up your environment, include in your project a .env file with a varialbe called REACT_APP_API_URL, the URL endpoint from running https://github.com/MichaelShaneSmith/FirstChoice locally.
