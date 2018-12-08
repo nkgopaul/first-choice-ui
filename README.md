@@ -45,4 +45,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## .env
 
-To set up your environment, include in your project a .env file with a varialbe called REACT_APP_API_URL, the URL endpoint from running https://github.com/MichaelShaneSmith/FirstChoice locally.
+To set up your environment, include in your project a .env file with a variable called REACT_APP_API_URL, the URL endpoint from running https://github.com/MichaelShaneSmith/FirstChoice locally.
